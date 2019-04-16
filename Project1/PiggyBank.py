@@ -3,8 +3,7 @@
 """
 Piggy Bank Software
 
-Piggy bank application will help students to understand the importance of 
-savings. It will allow students to perform various banking operations.
+Piggy bank application will help students to understand the importance of savings. It will allow students to perform various banking operations.
 """
 
 import random
@@ -18,9 +17,9 @@ class PiggyBank:
         self.__account_details = {}
         
     def run(self):
-        print("=======================================")
+        print("="*40)
         print("Hello {}, Welcome to Piggy Bank".format(self.name))
-        print("=======================================", "\n")
+        print("="*40)
         
         while True:
             if self.__continue:
@@ -30,7 +29,7 @@ class PiggyBank:
             else:
                 print("How may I help you?")
             
-            print("---------------------------------------")
+            print("-"*40)
             print("--> 1. Open an account for savings")
             print("--> 2. Check balance of an existing savings account")
             print("--> 3. Check recent transactions of an existing savings account")
@@ -38,7 +37,7 @@ class PiggyBank:
             print("--> 5. Deposit money into an existing savings account")
             print("--> 6. Summary of all savings accounts")
             print("[Note: Any other option will exit from the application]")
-            print("---------------------------------------")
+            print("-"*40)
             
             try:
                 option = int(input("Enter your option: "))
@@ -65,7 +64,7 @@ class PiggyBank:
     
     def __open_account(self):
         print("\n########## 1. Open an account for savings ##########")
-        print("--------------------------------------------")
+        print("-"*40)
         print("You can open an savings account with minimum 1000 INR")
         
         while True:
@@ -93,7 +92,7 @@ class PiggyBank:
     
     def __check_balance(self):
         print("\n########## 2. Check balance of an existing savings account ##########")
-        print("--------------------------------------------")
+        print("-"*40)
         
         ac_number = input("Please enter your account number: ")
         if ac_number in self.__account_details:
@@ -104,7 +103,7 @@ class PiggyBank:
     
     def __check_recent_transactions(self):
         print("\n########## 3. Check recent transactions of an existing savings account ##########")
-        print("--------------------------------------------")
+        print("-"*40)
         
         ac_number = input("Please enter your account number: ")
         if ac_number in self.__account_details:
@@ -118,7 +117,7 @@ class PiggyBank:
     
     def __withdraw(self):
         print("\n########## 4. Withdraw money from an existing savings account ##########")
-        print("--------------------------------------------")
+        print("-"*40)
         
         ac_number = input("Please enter your account number: ")
         if ac_number in self.__account_details:
@@ -142,7 +141,7 @@ class PiggyBank:
     
     def __deposit(self):
         print("\n########## 5. Deposit money into an existing savings account ##########")
-        print("--------------------------------------------")
+        print("-"*40)
         
         ac_number = input("Please enter your account number: ")
         if ac_number in self.__account_details:
@@ -162,7 +161,7 @@ class PiggyBank:
     
     def __summary(self):
         print("\n########## 6. Summary of all savings accounts ##########")
-        print("--------------------------------------------")
+        print("-"*40)
         
         if len(self.__account_details) > 0:
             total_sum = 0

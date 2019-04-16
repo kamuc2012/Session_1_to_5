@@ -4,9 +4,11 @@
 Write a Python Program to implement your own myreduce() function which works exactly like Python's built-in function reduce()
 """
 
+# to do sum of two variables
 def do_sum(a, b):
     return a + b
 
+# function will accept function and list and will work when list is not empty otherwise it returns None
 def myreduce(func, ls):
     val = None
     if len(ls) > 0:
@@ -16,4 +18,4 @@ def myreduce(func, ls):
     return val
 
 ls = [1, 2, 3, 4, 5]
-print(myreduce(do_sum, ls))
+print("Sum of the list:", myreduce(do_sum, ls))

@@ -13,7 +13,7 @@ class Triangle:
         self.a = a
         self.b = b
         self.c = c
-        self.s = (self.a + self.b + self.c) / 2
+        self.s = (self.a + self.b + self.c) / 2 # calculate the semi-perimeter
 
 class Area(Triangle):
     def calculate(self):
